@@ -1,0 +1,227 @@
+.content {
+    width: 50%;
+    /* margin-right: 15%; */
+    border-left: solid #00000052 1px;
+    margin-top: 20px;
+    padding-left: 2%;
+    margin-bottom: 50px;
+    text-align: justify-all;
+}
+
+.content p{
+    text-align: justify-all;
+}
+
+.content img{
+    max-width: 75%;
+}
+
+body {
+    color: #494949;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.display-4 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+footer{
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    background: #1e1e1e;
+    color: #edf2f7;
+    align-items: center;
+    width: 100%;
+}
+
+
+.button.dark-single {
+    --background: none;
+    --rectangle: #242836;
+    --success: #4bc793;
+}
+.button.white-single {
+    --background: none;
+    --rectangle: #f5f9ff;
+    --arrow: #275efe;
+    --success: #275efe;
+    --shadow: rgba(10, 22, 50, .1);
+}
+.button.dark {
+    --background: #242836;
+    --rectangle: #1c212e;
+    --arrow: #f5f9ff;
+    --text: #f5f9ff;
+    --success: #2f3545;
+}
+.button {
+    --background: #275efe;
+    --rectangle: #184fee;
+    --success: #4672f1;
+    --text: #fff;
+    --arrow: #fff;
+    --checkmark: #fff;
+    --shadow: rgba(10, 22, 50, .24);
+    display: flex;
+    overflow: hidden;
+    text-decoration: none;
+    background: var(--background);
+    border-radius: 8px;
+    box-shadow: 0 2px 8px -1px var(--shadow);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    width: fit-content;
+}
+.button:active {
+    transform: scale(0.95);
+    box-shadow: 0 1px 4px -1px var(--shadow);
+}
+.button ul {
+    margin: 0;
+    padding: 16px 40px;
+    list-style: none;
+    text-align: center;
+    position: relative;
+    backface-visibility: hidden;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 28px;
+    color: var(--text);
+}
+.button ul li:not(:first-child) {
+    top: 16px;
+    left: 0;
+    right: 0;
+    position: absolute;
+}
+.button ul li:nth-child(2) {
+    top: 76px;
+}
+.button ul li:nth-child(3) {
+    top: 136px;
+}
+.button > div {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    background: var(--rectangle);
+}
+.button > div:before, .button > div:after {
+    content: '';
+    display: block;
+    position: absolute;
+}
+.button > div:before {
+    border-radius: 1px;
+    width: 2px;
+    top: 50%;
+    left: 50%;
+    height: 17px;
+    margin: -9px 0 0 -1px;
+    background: var(--arrow);
+}
+.button > div:after {
+    width: 60px;
+    height: 60px;
+    transform-origin: 50% 0;
+    border-radius: 0 0 80% 80%;
+    background: var(--success);
+    top: 0;
+    left: 0;
+    transform: scaleY(0);
+}
+.button > div svg {
+    display: block;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    left: 50%;
+    top: 50%;
+    margin: -9px 0 0 -10px;
+    fill: none;
+    z-index: 1;
+    stroke-width: 2px;
+    stroke: var(--arrow);
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+.button.loading ul {
+    animation: text calc(4 * 1ms) linear forwards calc(4 * .065ms);
+}
+.button.loading > div:before {
+    animation: line calc(4 * 1ms) linear forwards calc(4 * .065ms);
+}
+.button.loading > div:after {
+    animation: background calc(4 * 1ms) linear forwards calc(4 * .065ms);
+}
+.button.loading > div svg {
+    animation: svg calc(4 * 1ms) linear forwards calc(4 * .065ms);
+}
+@keyframes svg {
+    0%, 20% {
+        stroke-dasharray: 0;
+        stroke-dashoffset: 0;
+    }
+    21%, 89% {
+        stroke-dasharray: 26px;
+        stroke-dashoffset: 26px;
+        stroke-width: 3px;
+        margin: -10px 0 0 -10px;
+        stroke: var(--checkmark);
+    }
+    100% {
+        stroke-dasharray: 26px;
+        stroke-dashoffset: 0;
+        margin: -10px 0 0 -10px;
+        stroke: var(--checkmark);
+    }
+    12% {
+        opacity: 1;
+    }
+    20%, 89% {
+        opacity: 0;
+    }
+    90%, 100% {
+        opacity: 1;
+    }
+}
+body .container .button {
+    margin: 16px;
+}
+@media (max-width: 400px) {
+    body .container .button {
+        margin: 12px;
+    }
+}
+
+png{
+    display: flex;
+    justify-content: center;
+}
+
+gif{
+    display: flex;
+    justify-content: center;
+}
+
+download{
+    display: flex;
+    justify-content: center;
+}
+
+qr svg:hover{
+    transition-duration: 1s;
+    scale: 1.5;
+}
+
+#content-cursor{
+    position: absolute;
+    background: white;
+    width: 200px;
+    height: 200px;
+    z-index: 9999;
+}
