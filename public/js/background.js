@@ -116,8 +116,11 @@ $(".modal-btn").click((event) => {
         const mailPass = $("#mailpass");
         if(!mailPass.html().includes("<br>")){
             mailPass.html("Lütfen bekleyiniz....");
-            fetch("/openAccount",{
-                method:"POST"
+            fetch("/api/openAccount",{
+                method:"POST",
+                headers:{
+                    "Accept": "application/json"
+                }
             }).then(async r => {
                 const text = await r.text();
                 const [email, password] = text.split(":");

@@ -32,10 +32,10 @@ class PageController extends Controller
         if ($page != null) {
             return response()->view("content", [
                 "content" => $page->content,
-                "title " => $page->title
+                "title" => $page->title
             ]);
         } else {
-            return abort(404);
+            die(abort(404));
         }
     }
 }

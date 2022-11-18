@@ -1,6 +1,5 @@
 <?php
 
-use App\Http\Controllers\OpenAccountController;
 use App\Http\Controllers\PageController;
 use Illuminate\Support\Facades\Route;
 
@@ -33,9 +32,7 @@ Route::get('/', function () {
     ]);
 });
 
-Route::post("/openAccount", [OpenAccountController::class, 'run']);
 
-//Route::get("/sync", [PageController::class, 'sync']);
 
 Route::get("/{path}",  [PageController::class, 'getPage']);
 

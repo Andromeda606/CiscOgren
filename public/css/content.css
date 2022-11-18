@@ -9,7 +9,7 @@
 }
 
 .content p{
-    text-align: justify-all;
+    text-align: justify;
 }
 
 .content img{
@@ -67,6 +67,8 @@ footer{
     --arrow: #fff;
     --checkmark: #fff;
     --shadow: rgba(10, 22, 50, .24);
+    margin-top: 30px;
+    margin-bottom: 30px;
     display: flex;
     overflow: hidden;
     text-decoration: none;
