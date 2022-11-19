@@ -43,7 +43,6 @@ class OpenAccountController extends Controller
                 break;
             }
         }
-        #TODO c36mjn0@dcctb.com mailindeki bodyi fetch et sonra regex yap bummmm
 
     }
 }

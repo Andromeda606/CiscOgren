@@ -6,6 +6,7 @@ use App\Models\Page;
 use Illuminate\Http\Request;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\Storage;
+use stdClass;
 
 class PageController extends Controller
 {
@@ -23,6 +24,7 @@ class PageController extends Controller
     static public function getPage($path)
     {
         $page = Page::select([
+            "id",
             "content",
             "title"
         ])->where(
@@ -30,15 +32,40 @@ class PageController extends Controller
             $path
         )->first();
         if ($page != null) {
+            $prev = Page::select([
+                "id",
+                "title",
+                "path"
+            ])->where("id", '<', (int)$page->id)->orderBy('id','desc')->first();
+            $next = Page::select([
+                "id",
+                "title",
+                "path"
+            ])->where("id", '>', $page->id)->orderBy('id','asc')->first();
+            if(is_null($next)){
+                $next = new stdClass();
+                $next->title = "";
+                $next->path = "#";
+            }
+
+            if(is_null($prev)){
+                $prev = new stdClass();
+                $prev->title = "";
+                $prev->path = "#";
+            }
             return response()->view("content", [
                 "content" => $page->content,
-                "title" => $page->title
+                "title" => $page->title,
+                "prev"=>$prev,
+                "next"=>$next
             ]);
         } else {
             die(abort(404));
         }
     }
 }
+
+
 
 
 

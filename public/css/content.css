@@ -227,3 +227,33 @@ qr svg:hover{
     height: 200px;
     z-index: 9999;
 }
+
+pagination{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+pagination a{
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+pagination a:nth-child(2):after{
+    font-family: 'Font Awesome 5 Free', serif;
+    display: inline-block;
+    padding: 5px;
+    vertical-align: middle;
+    content: "\f061";
+    font-weight: 900;
+}
+
+pagination a:nth-child(1):before{
+    font-family: 'Font Awesome 5 Free', serif;
+    display: inline-block;
+    padding: 5px;
+    vertical-align: middle;
+    content: "\f060";
+    font-weight: 900;
+}
