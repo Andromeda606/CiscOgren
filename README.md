@@ -3,7 +3,7 @@
 </p>
 
 # Cisco Packet Tracer Öğren
-Cisco Packet Tracer adlı uygulamayı nasıl öğreneceğinizi anlatan kitabın website tarafı.
+Cisco Packet Tracer adlı uygulamayı nasıl öğreneceğinizi anlatan kitabın website tarafı. popover özelliği eklendikten sonra veriler de eklenecek ve site tamamen bitmiş olacak.
 ## Geliştirme
 Minimum PHP Versiyonu: 8.1 veya daha yüksek
 ### Çalıştırma
@@ -16,5 +16,5 @@ $ php artisan schema:dump
 ```
 ## Canlı test
 [https://cpto.com.tr](https://cpto.com.tr)
-## Kredi
+## Bilgi
 Proje ödevi için sevgiyle kodlandı.

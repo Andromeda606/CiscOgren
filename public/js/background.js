@@ -122,9 +122,9 @@ $(".modal-btn").click((event) => {
                     "Accept": "application/json"
                 }
             }).then(async r => {
-                const text = await r.text();
-                const [email, password] = text.split(":");
-                mailPass.html("Email: " + email + "<br>Şifre: " + password);
+                const text = await r.json();
+                const {mail,password} = text;
+                mailPass.html("Email: " + mail + "<br>Şifre: " + password);
                 $("#mailpassStat").css("display","block");
             });
         }

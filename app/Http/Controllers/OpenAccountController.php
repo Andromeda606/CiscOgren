@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Models\SecMail;
 use GuzzleHttp\Client;
-use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 
 class OpenAccountController extends Controller
@@ -39,8 +38,10 @@ class OpenAccountController extends Controller
 
                 preg_match_all($re, $mail_service->fetchMessage($subjects[0]["id"])["body"], $matches, PREG_SET_ORDER, 0);
                 $client->get($matches[0][1]);
-                print("$mail_service->mail:$password");
-                break;
+                return response()->json([
+                    "mail" => $mail_service->mail,
+                    "password" => $password
+                ]);
             }
         }
 

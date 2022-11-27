@@ -1,4 +1,4 @@
-.content {
+.contentdata {
     width: 50%;
     /* margin-right: 15%; */
     border-left: solid #00000052 1px;
@@ -8,14 +8,18 @@
     text-align: justify-all;
 }
 
-.content p{
+.contentdata p{
     text-align: justify;
 }
 
-.content img{
+.contentdata img{
     max-width: 75%;
 }
-
+@media screen and (max-device-width: 640px){
+    .contentdata{
+        width: 85%;
+    }
+}
 body {
     color: #494949;
     display: flex;
@@ -256,4 +260,8 @@ pagination a:nth-child(1):before{
     vertical-align: middle;
     content: "\f060";
     font-weight: 900;
+}
+
+.popover img{
+    width: 100%;
 }

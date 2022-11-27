@@ -23,19 +23,12 @@ $("png").each(function (i, el) {
        `);
 });
 
-
-//TODO not working
-const syncMenu = ()=>{
-    let html = "";
-    $("a[id^=\"\"]").each((i,element) => {
-        const link = element.getAttribute("href");
-        const title = element.innerText;
-        html += `
-            <li><a href="${link}">${title}</a></li>
-        `;
+jQuery(document).ready(()=>{
+    $('[data-toggle="popover"]').popover({
+        html: true,
+        container: 'body',
+        trigger:"hover",
+        placement:"auto"
     });
-    $("menu").html(html);
-}
-
-syncMenu();
+});
 
