@@ -14,10 +14,10 @@ class PageController extends Controller
     public function sync()
     {
         //Bir anlık düşündüm ve gereksiz geldi. Önbelleğe atmak istedim ama zaten az veri vardı ve çok sorun yaratmazdı.
-        $pages = Page::all(["id","title","path"]);
+        $pages = Page::all(["id", "title", "path"]);
         Storage::put('siteData.json', $pages);
         return response([
-            "status"=>true
+            "status" => true
         ]);
     }
 
@@ -36,28 +36,37 @@ class PageController extends Controller
                 "id",
                 "title",
                 "path"
-            ])->where("id", '<', (int)$page->id)->orderBy('id','desc')->first();
+            ])->where("id", '<', (int)$page->id)->orderBy('id', 'desc')->first();
             $next = Page::select([
                 "id",
                 "title",
                 "path"
-            ])->where("id", '>', $page->id)->orderBy('id','asc')->first();
-            if(is_null($next)){
+            ])->where("id", '>', $page->id)->orderBy('id', 'asc')->first();
+
+            if (is_null($next)) {
                 $next = new stdClass();
                 $next->title = "";
                 $next->path = "#";
             }
 
-            if(is_null($prev)){
+            if (is_null($prev)) {
                 $prev = new stdClass();
                 $prev->title = "";
                 $prev->path = "#";
             }
+            $description = explode("</p>", $page->content);
+            foreach ($description as $row) {
+                if (trim($row) != "") {
+                    $description = trim(str_replace("<p>", "", $row));
+                    break;
+                }
+            }
             return response()->view("content", [
                 "content" => $page->content,
                 "title" => $page->title,
-                "prev"=>$prev,
-                "next"=>$next
+                "prev" => $prev,
+                "next" => $next,
+                "description" => $description
             ]);
         } else {
             die(abort(404));

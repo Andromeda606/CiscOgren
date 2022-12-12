@@ -110,6 +110,9 @@ particlesJS("particles-js", {
 });
 
 $(".modal-btn").click((event) => {
+    //Güvenlik sebebiyle bu kodlar eskidi.
+    location.href = "https://id.cisco.com/signin/register";
+    return;
     const target = event.target.dataset.target;
     $(`#${target}`).css("display", "block");
     if (target === "newAccountModal") {

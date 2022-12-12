@@ -5,13 +5,6 @@
         }
         return "opacity: 1";
     }
-    $description = explode("</p>", $content);
-    foreach($description as $row){
-        if(trim($row) != ""){
-            $description = trim(str_replace("<p>","",$row));
-            break;
-        }
-    }
 @endphp
     <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
