@@ -39,6 +39,7 @@ class OpenAccountController extends Controller
                 "password" => $e
             ]);
         }
+
         while (true) {
             $subjects = $mail_service->getSubjects();
             if (count($subjects) >= 1) {
