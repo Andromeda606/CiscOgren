@@ -24,7 +24,8 @@
     <h4>Programı direkt indirebilir veya direkt hesap açabilirsiniz.</h4>
     <div>
         <h3 class="modal-btn" data-target="downloadModal">İndir</h3>
-        <h3 class="modal-btn" data-target="newAccountModal">Cisco'ya Üye Ol</h3>
+        <h3 class="modal-btn" id="open" data-target="newAccountModal">Cisco'ya Üye Ol</h3>
+        <h3 class="modal-btn" id="siteMap" data-target="newAccountModal">Site Haritası</h3>
 
         <div id="downloadModal" class="modal">
 

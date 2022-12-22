@@ -58,7 +58,7 @@ class DatabaseSeeder extends Seeder
             "id"=>4,
             "path"=>'starTopology',
             "content"=>'<p>Yıldız topolojisini oluşturmaya başlayalım. Yıldız topolojisini oluşturmak için temel gereken sistem Switch ve son kullanıcı eşyalarıdır. Son kullanıcı eşyalarından 6 tane ve 1 switchden oluşan bir tasarımı yapacağız.</p>
-<p>Öncelikle.. Programı açalım ve teker teker <a href=\"/selectableMenu\">bilgisayarları ekleyelim</a>. GIF aşağıda!</p>
+<p>Öncelikle.. Programı açalım ve teker teker <a href="/selectableMenu">bilgisayarları ekleyelim</a>. GIF aşağıda!</p>
 <gif>topology-star1</gif>
 <p>Cihazları ekledik. Şimdi sıra switchde.</p>
 <img src=\'/gif/topology-star2.gif\' />
@@ -84,7 +84,7 @@ class DatabaseSeeder extends Seeder
 <png>bus/step3</png>
 <p>Terminator dediğimiz şeyler bus topolojisindeki sonlandırıcıdır. Bunlar kabloların başlangıç ve sonunu temsil eder. Şimdi kablolama ve renklendirme yapalım. Kablolama bus topolojisinde genelde koaksiyel kablodur. Fakat biz programda bilgisayara direkt bağlayamıyoruz. Bu yüzden bakır kablo kullanacağız.</p>
 <png>bus/step4</png>
-<p>Şimdi <a href=\"/changeIp\">IP Tanımlaması yapalım</a> ve ping atalım.</p>
+<p>Şimdi <a href="/changeIp">IP Tanımlaması yapalım</a> ve ping atalım.</p>
 <png>bus/step5</png>
 <p>İsterseniz Bus topolojisinin dosyasını aşağıdan indirebilirsiniz.</p>
 <download>bus-topology.pkt</download>
@@ -112,7 +112,7 @@ class DatabaseSeeder extends Seeder
         Page::create([
             "id"=>7,
             "path"=>'lanConnection',
-            "content"=>'<p>En basit ağ olan LAN, ev, ofis gibi küçük ancak ağa ihtiyaç duyulan yerlerde kullanılmak için yapılan ağ sistemidir. Bunun için bir <a href=\"#\" data-toggle=\"popover\" title=\"Yıldız Topolojisi\" data-bs-content=\"Ortada switch / hub olan topoloji yapısı <img src=\'/img/content/star-success.png\'/>\" >Yıldız topolojisi</a> yapacağım.</p>
+            "content"=>'<p>En basit ağ olan LAN, ev, ofis gibi küçük ancak ağa ihtiyaç duyulan yerlerde kullanılmak için yapılan ağ sistemidir. Bunun için bir <a href="#" data-toggle="popover" title="Yıldız Topolojisi" data-bs-content="Ortada switch / hub olan topoloji yapısı <img src=\'/img/content/star-success.png\'/>" >Yıldız topolojisi</a> yapacağım.</p>
 
 <p>
 
@@ -136,11 +136,11 @@ Diyelim bir okulda laboratuvar 1 için 7 adet bilgisayar eklemelisiniz. Bundan �
 
 <p>Buradan resimde gözüktüğü gibi <b>Command Prompt</b> seçeneğine basalım. Buraya herhangi bir seçili bilgisayar IP sini yazalım. Örneğin 192.168.1.107 olsun.</p>
 
-<pre class=\"prettyprint\">ping 192.168.1.107</pre>
+<pre class="prettyprint">ping 192.168.1.107</pre>
 
 <p>Yazarak test edelim. Dönen veri şuna benzer olacaktır.</p>
 
-<pre class=\"prettyprint\">
+<pre class="prettyprint">
 
 Pinging 192.168.1.107 with 32 bytes of data:
 
@@ -185,7 +185,7 @@ Approximate round trip times in milli-seconds:
         Page::create([
             "id"=>8,
             "path"=>'manConnection',
-            "content"=>'<p>Öncelikle <a href=\"lanConnection\">LAN da oluşturduğumuz şemayı</a> açalım ve aynı ağı kopyalayalım.</p>
+            "content"=>'<p>Öncelikle <a href="lanConnection">LAN da oluşturduğumuz şemayı</a> açalım ve aynı ağı kopyalayalım.</p>
 <png>man/step1</png>
 <p>Fakat ikisini bağlamaya çalışmayın.. Çünkü IP Adresleri aynı olduğundan turuncu renkte kalacaktırlar. Bu duruma çakışma denir. Bu yüzden IP leri düzenlemeliyiz</p>
 <png>man/step2</png>
@@ -352,7 +352,7 @@ https://192.168.1.109 yazalım.</p>
 
 IP Adresleri şu anda gördüğünüz gibi çok kafa karıştırıcı. İnsanların her biri her adresi ezbere bilseydi gerçekten çok korkunç bir hal alabilirdi. Unutulsa ne olurdu? Siteye asla giremezdiniz. Ayrıca yönetimi daha da kötü olurdu. Bunun için biz domaini yarattık. Kendi yazmış olduğumuz yazıları IP Adreslerine bağladık, ardından kullanıcılar yazıyı yazdığında ise yönlendirme yaptık. Biz bu kitapta nasıl yönlendiririz, nasıl bir DNS kurarız onları göreceğiz. Gelin birlikte bakalım.
 
-İki laboratuvarımız vardı, DHCP ile bağladığımız bu laboratuvar <a href=\"https://cpto.com.tr\">https://cpto.com.tr</a> ye erişebilse nasıl olurdu sizce? Hemen sunucu kuralım.</p>
+İki laboratuvarımız vardı, DHCP ile bağladığımız bu laboratuvar <a href="https://cpto.com.tr">https://cpto.com.tr</a> ye erişebilse nasıl olurdu sizce? Hemen sunucu kuralım.</p>
 
 <png>wan/step18</png>
 
@@ -598,7 +598,7 @@ Router komutlarını öğrendik. Şimdi ise bu kısımda nasıl kullanılır, ku
 
 <p>Bu kısımdan sonra config ekranına gelmeliyiz, yazacağımız komut
 
-<pre class=\"prettyprint\">configure terminal</pre>
+<pre class="prettyprint">configure terminal</pre>
 
 olacaktır.</p>
 
@@ -606,7 +606,7 @@ olacaktır.</p>
 
 <p>Bu esnadan sonra
 
-<pre class=\"prettyprint\">interface GigabitEthernet0/0/0</pre>
+<pre class="prettyprint">interface GigabitEthernet0/0/0</pre>
 
 yazarak cihazın portuna ulaşalım.</p>
 
@@ -618,7 +618,7 @@ no shutdown
 
 kapatmak için
 
-<pre class=\"prettyprint\">shutdown</pre>
+<pre class="prettyprint">shutdown</pre>
 
 yazabiliriz.</p>
 
@@ -626,7 +626,7 @@ yazabiliriz.</p>
 
 <p>Bu menüler arasında gezinmek için
 
-<pre class=\"prettyprint\">exit</pre>
+<pre class="prettyprint">exit</pre>
 
 komutunu kullanabilirsiniz. Bir önceki seçeneklere döner.</p>
 
@@ -650,11 +650,11 @@ komutunu kullanabilirsiniz. Bir önceki seçeneklere döner.</p>
 
 <p>Öncelikle
 
-<pre class=\"prettyprint\">enable</pre>
+<pre class="prettyprint">enable</pre>
 
 kodunu kullanmalıyız. Sonrasında ise
 
-<pre class=\"prettyprint\">config terminal</pre>
+<pre class="prettyprint">config terminal</pre>
 
 kodunu kullanalım.
 
@@ -664,23 +664,23 @@ kodunu kullanalım.
 
 <p>Bu menüden sonra düzenlemek istediğimiz soketi seçelim.
 
-<pre class=\"prettyprint\">interface GigabitEthernet0/0/0 </pre>
+<pre class="prettyprint">interface GigabitEthernet0/0/0 </pre>
 
 yazalım. Port açmak için gereken komudu hatırlıyor musunuz?
 
-<pre class=\"prettyprint\">no shutdown</pre>
+<pre class="prettyprint">no shutdown</pre>
 
 yazalım. ip adresi tanımlamamız gerektiğinden
 
-<pre class=\"prettyprint\">ip address 192.168.1.110 255.255.255.0<br>exit</pre>
+<pre class="prettyprint">ip address 192.168.1.110 255.255.255.0<br>exit</pre>
 
 yazalım ve sonra diğer sokete
 
-<pre class=\"prettyprint\">interface GigabitEthernet0/0/1</pre>
+<pre class="prettyprint">interface GigabitEthernet0/0/1</pre>
 
 yazarak gidelim. Tekrar port açma kodunu girdikten sonra
 
-<pre class=\"prettyprint\">ip address 1.1.1.1 255.0.0.0</pre>
+<pre class="prettyprint">ip address 1.1.1.1 255.0.0.0</pre>
 
 yazalım. Ayrı olacak çünkü iki ağ arasındaki ip farklı olabilir.
 
@@ -710,7 +710,7 @@ yazalım. Ayrı olacak çünkü iki ağ arasındaki ip farklı olabilir.
 
 <p>Eğer denerseniz router üzerinden giden bir isteğin serverda ayarlanmadan geri döndüğünü göreceksiniz. Bunun sebebi routerin sunucuyu yönlendirme ve yardımcı olarak değilde bir cihaz gibi tanımasıdır. Bunun için router kısmına gelelim ve
 
-<pre class=\"prettyprint\">ip helper-address 192.168.1.111</pre>
+<pre class="prettyprint">ip helper-address 192.168.1.111</pre>
 
 yazalım. Yazacağımız kısım routerden gelen soket olmalı.
 

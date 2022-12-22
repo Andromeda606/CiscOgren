@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\MapController;
 use App\Http\Controllers\PageController;
 use Illuminate\Support\Facades\Route;
 
@@ -32,7 +33,9 @@ Route::get('/', function () {
     ]);
 });
 
+Route::get("/sitemap.xml",  [MapController::class, 'create']);
 
+Route::get("/siteMap",  [MapController::class, 'run']);
 
 Route::get("/{path}",  [PageController::class, 'getPage']);
 

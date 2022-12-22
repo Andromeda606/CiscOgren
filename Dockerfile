@@ -11,7 +11,6 @@ RUN apt-get update && apt-get install -y \
     unzip \
     mariadb-client
 
-
 RUN apt-get clean && rm -rf /var/lib/apt/lists/*
 
 

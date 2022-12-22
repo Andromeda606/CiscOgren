@@ -111,27 +111,15 @@ particlesJS("particles-js", {
 
 $(".modal-btn").click((event) => {
     //Güvenlik sebebiyle bu kodlar eskidi.
-    location.href = "https://id.cisco.com/signin/register";
-    return;
     const target = event.target.dataset.target;
     $(`#${target}`).css("display", "block");
     if (target === "newAccountModal") {
-        const mailPass = $("#mailpass");
-        if(!mailPass.html().includes("<br>")){
-            mailPass.html("Lütfen bekleyiniz....");
-            fetch("/api/openAccount",{
-                method:"POST",
-                headers:{
-                    "Accept": "application/json"
-                }
-            }).then(async r => {
-                const text = await r.json();
-                const {mail,password} = text;
-                mailPass.html("Email: " + mail + "<br>Şifre: " + password);
-                $("#mailpassStat").css("display","block");
-            });
-        }
+        location.href = "https://id.cisco.com/signin/register";
     }
+});
+
+$("#siteMap").click(()=>{
+    location.href = "siteMap";
 });
 
 $(".close").click((event) => {

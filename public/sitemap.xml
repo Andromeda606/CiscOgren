@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+            <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+            <url>
+                <loc>http://127.0.0.1:3000/selectableMenu</loc>
+                <lastmod>22/12/2022</lastmod>
+            </url>
+            
+            <url>
+                <loc>http://127.0.0.1:3000/selectModule</loc>
+                <lastmod>22/12/2022</lastmod>
+            </url>
+            
+            <url>
+                <loc>http://127.0.0.1:3000/firstProject</loc>
+                <lastmod>22/12/2022</lastmod>
+            </url>
+            
+            <url>
+                <loc>http://127.0.0.1:3000/starTopology</loc>
+                <lastmod>22/12/2022</lastmod>
+            </url>
+            
+            <url>
+                <loc>http://127.0.0.1:3000/busTopology</loc>
+                <lastmod>22/12/2022</lastmod>
+            </url>
+            
+            <url>
+                <loc>http://127.0.0.1:3000/changeIp</loc>
+                <lastmod>22/12/2022</lastmod>
+            </url>
+            
+            <url>
+                <loc>http://127.0.0.1:3000/manConnection</loc>
+                <lastmod>22/12/2022</lastmod>
+            </url>
+            
+            <url>
+                <loc>http://127.0.0.1:3000/lanConnection</loc>
+                <lastmod>22/12/2022</lastmod>
+            </url>
+            
+            <url>
+                <loc>http://127.0.0.1:3000/wanConnection</loc>
+                <lastmod>22/12/2022</lastmod>
+            </url>
+            
+            <url>
+                <loc>http://127.0.0.1:3000/ringTopology</loc>
+                <lastmod>22/12/2022</lastmod>
+            </url>
+            
+            <url>
+                <loc>http://127.0.0.1:3000/pduSend</loc>
+                <lastmod>22/12/2022</lastmod>
+            </url>
+            
+            <url>
+                <loc>http://127.0.0.1:3000/simulationMode</loc>
+                <lastmod>22/12/2022</lastmod>
+            </url>
+            </urlset>
