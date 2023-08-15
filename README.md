@@ -3,24 +3,24 @@
 </p>
 
 
-# Cisco Packet Tracer Öğren
-Cisco Packet Tracer adlı uygulamayı nasıl öğreneceğinizi anlatan kitabın website tarafı.
+# CPTO.com.tr
+The website side of the book that tells you how to learn about an application called Cisco Packet Tracer.
 ## Geliştirme
-Minimum PHP Versiyonu: 8.1 veya daha yüksek
-### Çalıştırma
+Minimum PHP Version: 8.1 or higher
+### Run
 ```shell
 php artisan serve
 ```
-### Veritabanını oluşturma
+### Create the database
 ```shell
 php artisan migrate:install
 php artisan schema:dump
 ```
-### Veritabanı Doldurma
+### Database Seed
 ```shell
 php artisan db:seed
 ```
-## Canlı test
+## Live test
 [https://cpto.com.tr](https://cpto.com.tr)
-## Bilgi
-Proje ödevi için sevgiyle kodlandı.
+## Knowledge
+Lovingly coded for the project assignment.
